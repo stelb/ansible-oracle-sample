@@ -1,0 +1,5 @@
+---
+#oracle_sw_source_local: /local/oracle_stage
+oracle_sw_copy: false
+# enable db patching
+apply_patches_db: True

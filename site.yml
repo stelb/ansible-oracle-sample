@@ -1,0 +1,38 @@
+---
+
+ - hosts: all
+   become: yes
+   tasks:
+     # template provides localhost only..
+     - name: set hostname
+       hostname:
+         name: '{{inventory_hostname}}'
+       tags: hostname
+
+ - name: Host configuration
+   hosts: all
+   become: yes
+   roles:
+      - common
+      - orahost
+      - cxoracle
+
+ - hosts: all
+   become: yes
+   tasks:
+     # dynamic nfs mount from ansible-oracle did not work for me
+     - name: mount install media
+       mount:
+         fstype: nfs
+         src: titan.hh:/install/oracle_stage
+         path: /u01/stage
+         state: mounted
+
+ - name: Database Server Installation & Database Creation
+   hosts: all
+   become: yes
+   roles:
+      - oraswdb-install
+      - oradb-manage-db
+#      - oraswdb-manage-patches
+   tags: do_ora

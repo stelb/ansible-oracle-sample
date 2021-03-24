@@ -1,0 +1,43 @@
+oracle_databases:
+  - home: 19300-base
+    oracle_db_name: cdb19
+    oracle_db_type: SI
+    oracle_database_type: MULTIPURPOSE
+    oracle_db_mem_totalmb: 1024                            # Amount of RAM to be used for SGA
+    is_container: true
+    storage_type: FS
+    state: present
+    listener_name: LISTENER                              # This home will have a listener configured
+#    listener_port: 1521
+
+  - home: 19300-base
+    oracle_db_name: si
+    oracle_db_type: SI
+    oracle_database_type: MULTIPURPOSE
+    oracle_db_mem_totalmb: 1024                            # Amount of RAM to be used for SGA
+    is_container: false
+    storage_type: FS
+    state: present
+    listener_name: LISTENER                              # This home will have a listener configured
+    # listener_port: 1521
+  - home: 11204-base
+    oracle_db_name: db112
+    oracle_db_type: SI
+    oracle_database_type: MULTIPURPOSE
+    oracle_db_mem_totalmb: 1024                            # Amount of RAM to be used for SGA
+    is_container: false
+    storage_type: FS
+    state: present
+    listener_name: LISTENER                              # This home will have a listener configured
+#    listener_port: 1521
+
+  # - home: 19300-base
+  #   oracle_db_name: db19
+  #   oracle_db_type: SI
+  #   oracle_database_type: MULTIPURPOSE
+  #   oracle_db_mem_totalmb: 1024                            # Amount of RAM to be used for SGA
+  #   is_container: false
+  #   storage_type: FS
+  #   state: present
+  #   listener_name: LISTENER                              # This home will have a listener configured
+  #   listener_port: 1521

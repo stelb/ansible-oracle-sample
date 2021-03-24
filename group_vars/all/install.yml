@@ -1,0 +1,4 @@
+---
+#install_from_nfs: true
+nfs_server_sw: titan
+nfs_server_sw_path: /install/oracle_stage
