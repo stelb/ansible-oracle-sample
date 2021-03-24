@@ -1,0 +1,14 @@
+---
+sqlnet_config:
+  prod:
+    - name: SQLNET.EXPIRE_TIME
+      value: 10
+    - name: SQLNET.ALLOWED_LOGON_VERSION
+      value: 11
+  test:
+    - name: SQLNET.ALLOWED_LOGON_VERSION
+      value: 12
+
+sqlnet_installed:
+  - home: 19300-base
+    sqlnet: prod
