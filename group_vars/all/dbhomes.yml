@@ -6,11 +6,13 @@ db_homes_config:
     home: db1
     version: 19.3.0.0
     edition: EE
-    opatchauto:
-    - patchid: RU_19.9
+    # patch this home
+    opatch_minversion: 12.2.0.1.19 # non optional, should be in patch config
+    opatchauto: [] # opatchauto (with GI) & opatch is needed, wether used or not
+    opatch:
+    - patchid: 31771877
       stop_processes: true
       state: present
-    # patch this home
 
   11204-base:
     home: db1
@@ -21,10 +23,10 @@ db_homes_installed:
         - home: 19300-base
           # apply_patches: False
           apply_patches: True
-          opatchauto:
-          - patchid: RU_19.9
-            stop_processes: true
-            state: present
+          # opatchauto:
+          # - patchid: RU_19.9
+          #   stop_processes: true
+          #   state: present
           state: present
         - home: 11204-base
           apply_patches: false

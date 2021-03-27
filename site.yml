@@ -31,8 +31,10 @@
  - name: Database Server Installation & Database Creation
    hosts: all
    become: yes
+   debugger: on_failed
    roles:
       - oraswdb-install
       - oradb-manage-db
-#      - oraswdb-manage-patches
+      - oraswdb-manage-patches
+      - oradb-datapatch
    tags: do_ora

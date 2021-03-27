@@ -1,0 +1,8 @@
+---
+oracle_sw_patches:
+     - patchid: 31771877 # RU_19.9, name would be nice
+       version: 19.0.0.3
+       description: "DB RU 19.9"
+       patchversion: "??" # seems to be irrelevant information?
+       filename: p31771877_190000_Linux-x86-64.zip
+       creates: 31771877/files/suptools/tfa/release/tfa_home/ext/tnt/lib/tnt.jar/oracle/rat/tfa/toaster.class
