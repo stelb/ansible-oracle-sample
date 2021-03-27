@@ -1,0 +1,6 @@
+---
+#oracle_sw_source_local: /local/oracle_stage
+
+# files are already accessible in /u01/stage, ansible is terribly slow
+# with copying huge files.. 
+oracle_sw_copy: false

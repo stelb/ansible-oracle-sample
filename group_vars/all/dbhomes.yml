@@ -1,5 +1,7 @@
 ---
-disable_EE_options: False
+disable_EE_options: False # broken with 19, fix is not merged yet
+apply_patches_db: True # enable db patching
+
 
 db_homes_config:
   19300-base:
