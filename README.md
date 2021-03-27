@@ -8,3 +8,4 @@ ansible-oracle misses a 19.3.0.0 template for netca, as of now. there is merge r
 
 
 * network config (sqlnet, listener, tnsnames)
+* apply RU 19.9 patch
