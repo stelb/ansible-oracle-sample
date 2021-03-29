@@ -1,3 +1,6 @@
+---
+autostartup_service: true
+
 oracle_databases:
   - home: 19300-base
     oracle_db_name: cdb19
